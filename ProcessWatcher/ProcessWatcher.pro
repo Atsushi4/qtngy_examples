@@ -10,7 +10,7 @@ TARGET = ProcessWatcher
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
+SOURCES += main.cpp \
         processwatcher.cpp
 
 HEADERS  += processwatcher.h

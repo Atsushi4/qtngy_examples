@@ -38,7 +38,7 @@ private:
     void moveEvent(QMoveEvent *event);
 
 private:
-    static const int CaseCount = 2;
+    static const int CaseCount = 3;
     QList<ProgressDisplay*> bars;
     ProgressDisplay *barTotal;
 };

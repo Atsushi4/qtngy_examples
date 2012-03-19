@@ -6,7 +6,7 @@
   このWorkerのslotは新しいスレッドで実行される。
   ワーカスレッドは一つなのでWorkerを3つに分けても並列化しない。
 
-  敢えてQThreadを継承する利点が無い。
+  でも敢えてQThreadを継承する利点が無いと思う。
 **/
 
 #include <QThread>

@@ -28,7 +28,6 @@ ProcessWatcher::~ProcessWatcher()
 void ProcessWatcher::readStandardOutput()
 {
     QString str = process->readAll();
-    qDebug() << str;
 
     QStringList lines = str.split("\n", QString::SkipEmptyParts);
     foreach (QString line, lines) {

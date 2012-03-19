@@ -1,6 +1,7 @@
 #include "worker.h"
 #include <iostream>
 #include <windows.h>
+//#include <QtTest>
 
 QMutex Worker::mutex;
 

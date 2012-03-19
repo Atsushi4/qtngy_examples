@@ -6,18 +6,22 @@
 
 QT       += core gui
 
+#CONFIG += qtestlib
+
 TARGET = MultiThreadApp
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        multithreadapp.cpp \
+SOURCES += main.cpp \
+    multithreadapp.cpp \
     worker.cpp \
     case1.cpp \
-    case2.cpp
+    case2.cpp \
+    case3.cpp
 
 HEADERS  += multithreadapp.h \
     worker.h \
-    case2.cpp
+    case2.cpp \
+    case3.cpp
 
 DESTDIR = ../bin
