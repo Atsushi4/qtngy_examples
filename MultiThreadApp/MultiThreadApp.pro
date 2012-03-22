@@ -6,11 +6,8 @@
 
 QT       += core gui
 
-#CONFIG += qtestlib
-
 TARGET = MultiThreadApp
 TEMPLATE = app
-
 
 SOURCES += main.cpp \
     multithreadapp.cpp \
