@@ -1,7 +1,6 @@
 #include "worker.h"
 #include <iostream>
-#include <windows.h>
-//#include <QtTest>
+#include <QElapsedTimer>
 
 QMutex Worker::mutex;
 
@@ -10,19 +9,19 @@ Worker::Worker(QObject *parent) :
 {
 }
 
-// 0.1•b‚ÌŽdŽ–‚ð30‰ñ‚·‚é
+// 0.1ï¿½bï¿½ÌŽdï¿½ï¿½ï¿½ï¿½30ï¿½ñ‚·‚ï¿½
 void Worker::doWork1()
 {
     work(1, 100, 30);
 }
 
-// 0.4•b‚ÌŽdŽ–‚ð10‰ñ‚·‚é
+// 0.4ï¿½bï¿½ÌŽdï¿½ï¿½ï¿½ï¿½10ï¿½ñ‚·‚ï¿½
 void Worker::doWork2()
 {
     work(2, 400, 10);
 }
 
-// 0.2•b‚ÌŽdŽ–‚ð15‰ñ‚·‚é
+// 0.2ï¿½bï¿½ÌŽdï¿½ï¿½ï¿½ï¿½15ï¿½ñ‚·‚ï¿½
 void Worker::doWork3()
 {
     work(3, 200, 15);
@@ -32,7 +31,11 @@ void Worker::work(int process, int msecs, int count)
 {
     for (int i = 1; i <= count; ++i)
     {
-        ::Sleep(msecs);
+        QElapsedTimer timer;
+        timer.start();
+        while (timer.elapsed() < msecs)
+            ;
+
         QMutexLocker lock(&mutex);
         (std::cout << QString("done:%1 %2 %3\n").arg(process).arg(i).arg(count).toStdString()).flush();
         emit progressChanged(process, i, count);
