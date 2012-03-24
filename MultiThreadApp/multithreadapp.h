@@ -15,19 +15,19 @@ public:
     ~MultiThreadApp();
 
 public slots:
-    // i’»óM
+    // é€²æ—å—ä¿¡
     void progressChanged(int process, int done, int total);
 
 
-    // ƒVƒ“ƒOƒ‹ƒXƒŒƒbƒh
+    // ã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰
     void on_button1_clicked();
-    // 3.1.ƒ_ƒ‚Èg‚¢•û|QThread‚Ìrun‚Ånew
+    // 3.1.ãƒ€ãƒ¡ãªä½¿ã„æ–¹ï¼QThreadã®runã§new
     void on_button2_clicked();
-    // 3.2.ƒ_ƒ‚Èg‚¢•û|QThread‚Ìrun‚Éˆ—‚ğ‘‚­(exec‚µ‚È‚¢)
+    // 3.2.ãƒ€ãƒ¡ãªä½¿ã„æ–¹ï¼QThreadã®runã«å‡¦ç†ã‚’æ›¸ã(execã—ãªã„)
     void on_button3_clicked();
 
 
-    // ‰Šú‰»
+    // åˆæœŸåŒ–
     void start();
 
 

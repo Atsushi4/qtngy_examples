@@ -3,8 +3,6 @@
 
 #include <QtGui>
 
-//class QProcess;
-
 class ProcessWatcher : public QWidget
 {
     Q_OBJECT

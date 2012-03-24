@@ -53,7 +53,7 @@ void MultiThreadApp::moveEvent(QMoveEvent *event)
 {
     QPoint p = event->pos();
     p = window()->mapFrom(this, p);
-    // win xp‚¾‚Æ4‚¾‚¯‚Ç7‚¾‚Æ7HƒEƒBƒ“ƒhƒE‚ÌƒTƒCƒY‚Í‚Ç‚¤‚â‚Á‚Äæ‚é‚ñ‚¾‚ë‚¤BBB
+    // win xpã ã¨4ã ã‘ã©7ã ã¨7ï¼Ÿã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ã‚µã‚¤ã‚ºã¯ã©ã†ã‚„ã£ã¦å–ã‚‹ã‚“ã ã‚ã†ã€‚ã€‚ã€‚
     p.rx() -= 7;
     p.ry() += window()->height() + 7;
     (std::cout << QString("pos:%1 %2\n").arg(p.x()).arg(p.y()).toStdString()).flush();

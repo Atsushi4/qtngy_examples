@@ -9,19 +9,16 @@ Worker::Worker(QObject *parent) :
 {
 }
 
-// do work 100msec 30times
 void Worker::doWork1()
 {
     work(1, 100, 30);
 }
 
-// do work 400msec 10times
 void Worker::doWork2()
 {
     work(2, 400, 10);
 }
 
-// do work 200msec 15times
 void Worker::doWork3()
 {
     work(3, 200, 15);

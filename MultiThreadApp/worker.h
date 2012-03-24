@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QMutex>
 
-// ���[�J�[
+// ワーカー
 class Worker : public QObject
 {
     Q_OBJECT
@@ -15,9 +15,9 @@ signals:
     void progressChanged(int process, int done, int total);
     
 public slots:
-    void doWork1(); // ���[�J�[�֐����̂P
-    void doWork2(); // ���[�J�[�֐����̂Q
-    void doWork3(); // ���[�J�[�֐����̂R
+    void doWork1(); // 100msecの仕事を30回します。
+    void doWork2(); // 400msecの仕事を10回します。
+    void doWork3(); // 200msecの仕事を15回します。
 
 private:
     void work(int process, int msecs, int count);

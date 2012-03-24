@@ -1,12 +1,12 @@
 /**
-  3.1.ƒ_ƒ‚Èg‚¢•û|QThread‚Ìrun‚Ånew
+  3.1.ãƒ€ãƒ¡ãªä½¿ã„æ–¹ï¼QThreadã®runã§new
 
-  QThread‚ğŒp³‚µCrunŠÖ”“à‚ÅWorker‚ğnew‚·‚éB
-  runŠÖ”“à‚Ånew‚³‚ê‚½Worker‚ÍV‚µ‚¢ƒXƒŒƒbƒh‚É‘®‚·‚éB
-  ‚±‚ÌWorker‚Ìslot‚ÍV‚µ‚¢ƒXƒŒƒbƒh‚ÅÀs‚³‚ê‚éB
-  ƒ[ƒJƒXƒŒƒbƒh‚Íˆê‚Â‚È‚Ì‚ÅWorker‚ğ3‚Â‚É•ª‚¯‚Ä‚à•À—ñ‰»‚µ‚È‚¢B
+  QThreadã‚’ç¶™æ‰¿ã—ï¼Œruné–¢æ•°å†…ã§Workerã‚’newã™ã‚‹ã€‚
+  runé–¢æ•°å†…ã§newã•ã‚ŒãŸWorkerã¯æ–°ã—ã„ã‚¹ãƒ¬ãƒƒãƒ‰ã«å±ã™ã‚‹ã€‚
+  ã“ã®Workerã®slotã¯æ–°ã—ã„ã‚¹ãƒ¬ãƒƒãƒ‰ã§å®Ÿè¡Œã•ã‚Œã‚‹ã€‚
+  ãƒ¯ãƒ¼ã‚«ã‚¹ãƒ¬ãƒƒãƒ‰ã¯ä¸€ã¤ãªã®ã§Workerã‚’3ã¤ã«åˆ†ã‘ã¦ã‚‚ä¸¦åˆ—åŒ–ã—ãªã„ã€‚
 
-  ‚Å‚àŠ¸‚¦‚ÄQThread‚ğŒp³‚·‚é—˜“_‚ª–³‚¢‚Æv‚¤B
+  ã§ã‚‚æ•¢ãˆã¦QThreadã‚’ç¶™æ‰¿ã™ã‚‹åˆ©ç‚¹ãŒç„¡ã„ã¨æ€ã†ã€‚
 **/
 
 #include <QThread>
@@ -54,4 +54,4 @@ void MultiThreadApp::on_button2_clicked()
     QTimer::singleShot(100, t, SIGNAL(go()));
 }
 
-#include "moc_case2.cpp"
+#include "case2.moc"

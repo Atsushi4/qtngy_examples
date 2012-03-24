@@ -1,11 +1,11 @@
 /**
-  3.2.�_���Ȏg�����|QThread��run�ɏ���������
+  3.2.ダメな使い方－QThreadのrunに処理を書く
 
-  QThread���p�����Crun�֐����ɂ��̂܂܏����������B
-  run�֐����͐V�����X���b�h�Ȃ̂ł��̂܂܏�����������B
-  exec���Ă΂Ȃ��ƃC�x���g���[�v������Ȃ��̂ŏ����y�ʂ����H
+  QThreadを継承し，run関数内にそのまま処理を書く。
+  run関数内は新しいスレッドなのでそのまま処理がかける。
+  execを呼ばないとイベントループが走らないので少し軽量かも？
 
-  �ł�����ς芸����QThread���p�����闘�_�������Ǝv���B
+  でもやっぱり敢えてQThreadを継承する利点が無いと思う。
 **/
 
 #include <QThread>
@@ -32,9 +32,9 @@ private:
 void MultiThreadApp::on_button3_clicked()
 {
     Manager2 *manager = new Manager2(this);
-    // run���I���Ə���Ɏ���ł����̂ł�����ƋC�y
+    // runが終わると勝手に死んでくれるのでちょっと気楽
     connect(manager, SIGNAL(finished()), manager, SLOT(deleteLater()));
     manager->start();
 }
 
-#include "moc_case3.cpp"
+#include "case3.moc"

@@ -17,8 +17,6 @@ SOURCES += main.cpp \
     case3.cpp
 
 HEADERS  += multithreadapp.h \
-    worker.h \
-    case2.cpp \
-    case3.cpp
+    worker.h
 
 DESTDIR = ../bin
